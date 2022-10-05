@@ -16,16 +16,30 @@
 
 <body>
 
-  <h1>Your Extension</h1>
+  <h2>Ingresa el número al que le enviarás tu mensaje</h2>
 
-  <p>
-    <a class="indicator" href="https://www.youtube.com/channel/UCRzS48bskynAxoI38BFypfQ?sub_confirmation=1"
-      target="_blank">Subscribe to Virej</a> • <a class="indicator"
-      href="https://github.com/virejdasani/Chrome-Extension-Boilerplate" target="_blank">Give the repo
-      a ⭐️</a>
-  </p>
+  <form id="myForm">
+    <input type="tel" id="number" name="number">
+  </form>
+  
+  <button onclick="doSomething()">Abrir chat</button>
+  
+  <script>
+    let phoneNumber = document.querySelector("#number")
+    function doSomething() {
+      window.open("https://wa.me/+58" + phoneNumber.value)
+    };
+  </script>
 
-  <script src=" popup.js"></script>
+  <script>
+    document.getElementById("myForm").onkeypress = function(e) {
+      var key = e.charCode || e.keyCode || 0;     
+      if (key == 13) {
+        e.preventDefault();
+        // window.open("https://wa.me/+58" + phoneNumber.value)
+      }
+    }
+  </script>
 </body>
 
 </html>
