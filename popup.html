@@ -11,6 +11,8 @@
   <link rel="icon" href="assets/icon.png" />
 
   <title>Your extension name</title>
+
+  <script src="/open-chat.js"></script>
 </head>
 
 <body>
@@ -21,16 +23,9 @@
     <input type="tel" id="number" name="number">
   </form>
   
-  <button onclick="doSomething()">Abrir chat</button>
-  
-  <script>
-    let phoneNumber = document.querySelector("#number")
-    function doSomething() {
-      window.open("https://wa.me/+58" + phoneNumber.value)
-    };
-  </script>
+  <button id="button">Abrir chat</button>
 
-  <script>
+  <!-- <script>
     document.getElementById("myForm").onkeypress = function(e) {
       var key = e.charCode || e.keyCode || 0;     
       if (key == 13) {
@@ -38,7 +33,7 @@
         // window.open("https://wa.me/+58" + phoneNumber.value)
       }
     }
-  </script>
+  </script> -->
 </body>
 
 </html>
