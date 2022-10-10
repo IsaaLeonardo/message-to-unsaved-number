@@ -19,7 +19,15 @@
 
   <h2>Ingresa el número al que le enviarás tu mensaje</h2>
 
-  <form id="myForm">
+  <form>
+    <!-- Select Input for country code -->
+    <label for="country-code">Country code</label>
+    <select name="country-code" id="country-code">
+        <option value="58">🇻🇪 Venezuela (+58)</option>
+        <option value="57">🇨🇴 Colombia (+57)</option>
+    </select>
+
+    <!-- Tel Input for number -->
     <input type="tel" id="number" name="number">
   </form>
   
