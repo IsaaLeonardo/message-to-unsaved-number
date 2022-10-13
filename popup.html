@@ -12,6 +12,7 @@
 
   <title>Your extension name</title>
 
+  <script src="/popup.js"></script>
   <script src="/open-chat.js"></script>
 </head>
 
@@ -19,7 +20,7 @@
 
   <h2>Ingresa el número al que le enviarás tu mensaje</h2>
 
-  <form>
+  <form id="myForm">
     <!-- Select Input for country code -->
     <label for="country-code">Country code</label>
     <select name="country-code" id="country-code">
@@ -32,16 +33,6 @@
   </form>
   
   <button id="button">Abrir chat</button>
-
-  <!-- <script>
-    document.getElementById("myForm").onkeypress = function(e) {
-      var key = e.charCode || e.keyCode || 0;     
-      if (key == 13) {
-        e.preventDefault();
-        // window.open("https://wa.me/+58" + phoneNumber.value)
-      }
-    }
-  </script> -->
 </body>
 
 </html>
